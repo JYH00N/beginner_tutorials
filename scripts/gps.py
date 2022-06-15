@@ -4,6 +4,7 @@
 import rospy
 import numpy as np
 import tf
+import os
 from pyproj import Proj
 from std_msgs.msg import Float32MultiArray
 
@@ -39,6 +40,7 @@ class LL2UTMConverter:
         utm_msg = Float32MultiArray()
 
         utm_msg.data = [self.x, self.y]
+        os.system('clear')
         print(utm_msg.data)
         print('lat : ', self.lat)
         print('lon : ', self.lon)
