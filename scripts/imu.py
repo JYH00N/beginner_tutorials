@@ -4,6 +4,7 @@
 import rospy
 from sensor_msgs.msg import Imu
 import tf
+import os
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
 from math import pi
 
@@ -22,11 +23,12 @@ class IMUParser:
         roll_deg=roll/pi*180
         pitch_deg=pitch/pi*180
         yaw_deg=yaw/pi*180
-        print("-----------------------")
-        print("roll  (deg) = ",roll_deg)
-        print("pitch (deg) = ",pitch_deg)
-        print("yaw   (deg) = ",yaw_deg)
-
+        os.system('clear')
+        print("-------------------------------------")
+        print(" roll  (deg) = ",roll_deg)
+        print(" pitch (deg) = ",pitch_deg)
+        print(" yaw   (deg) = ",yaw_deg)
+        print("-------------------------------------")
         self.prev_time=rospy.get_rostime()
 
 if __name__ == '__main__' :
