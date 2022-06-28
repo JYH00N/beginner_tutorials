@@ -123,6 +123,8 @@ if __name__ == '__main__':
                                                 xyr[:, 1].astype(np.int32))
 
             cv2.imshow("birdview", img_lane_fit)
+            cv2.imshow("img_warp", img_warp)
+            cv2.imshow("origin_img", image_parser.img_bgr)
 
             cv2.waitKey(1)
 
